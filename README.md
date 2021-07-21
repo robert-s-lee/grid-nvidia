@@ -1,6 +1,11 @@
 Demo of Grid.ai using Poetry as the package manager.
 
-- Test Locally
+- [Test Locally](#test-locally)
+- [Running when source control is GitHub](#running-when-source-control-is-github)
+- [Running when source control is BitBucket and others](#running-when-source-control-is-bitbucket-and-others)
+- [Example Output](#example-output)
+
+# Test Locally
 ```bash
 # require python 3.8 for Grid.ai CLI
 conda create --name python38 python=3.8
@@ -11,14 +16,22 @@ docker build -t poetry:latest -f poetry.Dockerfile .
 docker run -it poetry:latest /gridai/project/run.py
 ```
 
+# Running when source control is GitHub
 - Run on Grid.ai CLI below or click
-[![Single Run](https://img.shields.io/badge/rid_AI-run-78FF96.svg?labelColor=black&logo=data:image/svg%2bxml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMTR2MjBhMTQgMTQgMCAwMDE0IDE0aDlWMzYuOEgxMi42VjExaDIyLjV2N2gxMS4yVjE0QTE0IDE0IDAgMDAzMi40IDBIMTVBMTQgMTQgMCAwMDEgMTR6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTM1LjIgNDhoMTEuMlYyNS41SDIzLjl2MTEuM2gxMS4zVjQ4eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==)](
+[![Grid.ai Run](https://img.shields.io/badge/rid_AI-run-78FF96.svg?labelColor=black&logo=data:image/svg%2bxml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMTR2MjBhMTQgMTQgMCAwMDE0IDE0aDlWMzYuOEgxMi42VjExaDIyLjV2N2gxMS4yVjE0QTE0IDE0IDAgMDAzMi40IDBIMTVBMTQgMTQgMCAwMDEgMTR6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTM1LjIgNDhoMTEuMlYyNS41SDIzLjl2MTEuM2gxMS4zVjQ4eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==)](
 https://platform.grid.ai/#/runs?script=https://github.com/robert-s-lee/grid-poetry/blob/218147c10e887722952f53b6d29983f3c3019d7d/run.py&cloud=grid&instance=t2.medium&accelerators=1&disk_size=200&framework=lightning&script_args=run.py
 )
 ```
 grid run --dockerfile poetry.Dockerfile run.py
 ```
 
+# Running when source control is BitBucket and others
+Clone the repo to local environment and use `--localdir`
+```
+grid run --dockerfile poetry.Dockerfile --localdir run.py
+```
+
+# Example Output
 - An example of output from the Run
 ```log
 grid logs powerful-ape-262-exp0
