@@ -26,7 +26,7 @@ grid run --dockerfile poetry.Dockerfile run.py
 ```
 
 # Running when source control is BitBucket and others
-Clone the repo to local environment and use `--localdir`
+Clone the [BitBucket repo](https://bitbucket.org/robert-s-lee/grid-poetry/src/main/) to local environment and use Grid.ai `--localdir`
 ```
 grid run --dockerfile poetry.Dockerfile --localdir run.py
 ```
