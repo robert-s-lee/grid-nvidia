@@ -11,12 +11,15 @@ docker build -t poetry:latest -f poetry.Dockerfile .
 docker run -it poetry:latest /gridai/project/run.py
 ```
 
-Run on Grid.ai
+Run on Grid.ai CLI below or click
+[![Single Run](https://img.shields.io/badge/rid_AI-run-78FF96.svg?labelColor=black&logo=data:image/svg%2bxml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMTR2MjBhMTQgMTQgMCAwMDE0IDE0aDlWMzYuOEgxMi42VjExaDIyLjV2N2gxMS4yVjE0QTE0IDE0IDAgMDAzMi40IDBIMTVBMTQgMTQgMCAwMDEgMTR6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTM1LjIgNDhoMTEuMlYyNS41SDIzLjl2MTEuM2gxMS4zVjQ4eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==)](
+https://platform.grid.ai/#/runs?script=https://github.com/robert-s-lee/grid-poetry/blob/218147c10e887722952f53b6d29983f3c3019d7d/run.py&cloud=grid&instance=t2.medium&accelerators=1&disk_size=200&framework=lightning&script_args=run.py
+)
 ```
 grid run --dockerfile poetry.Dockerfile run.py
 ```
 
-An example of output from the run
+An example of output from the Run
 ```log
 grid logs powerful-ape-262-exp0
 
@@ -185,5 +188,16 @@ grid logs powerful-ape-262-exp0
 [build] [2021-07-21T19:59:02.469954+00:00] INFO[0232] Pushed image to 1 destinations               
 [build] [2021-07-21T19:59:02.841279+00:00] INFO[0232] Pushing image to 302180240179.dkr.ecr.us-east-1.amazonaws.com/grid-cloud-prod:21dad55a-ea48-488f-aa1e-a49a8e15e3f0 
 [build] [2021-07-21T19:59:03.489464+00:00] INFO[0233] Pushed image to 1 destinations  
-
+[experiment] [2021-07-21T20:04:52.203580+00:00] Hello, world!
+[experiment] [2021-07-21T20:04:52.203605+00:00] PyTorch Lightning version: 1.3.8
+[experiment] [2021-07-21T20:04:52.203610+00:00] Loop 0
+[experiment] [2021-07-21T20:04:52.203614+00:00] Loop 1
+[experiment] [2021-07-21T20:04:52.203617+00:00] Loop 2
+[experiment] [2021-07-21T20:04:52.203621+00:00] Loop 3
+[experiment] [2021-07-21T20:04:52.203625+00:00] Loop 4
+[experiment] [2021-07-21T20:04:52.203628+00:00] Loop 5
+[experiment] [2021-07-21T20:04:52.203632+00:00] Loop 6
+[experiment] [2021-07-21T20:04:52.203636+00:00] Loop 7
+[experiment] [2021-07-21T20:04:52.203639+00:00] Loop 8
+[experiment] [2021-07-21T20:04:52.203643+00:00] Loop 9
 ```
