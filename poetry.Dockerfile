@@ -3,7 +3,7 @@ FROM python:3.9.6-slim
 # required lines
 WORKDIR /gridai/project
 COPY . .
-# space for pip install
+# space for pip install and prevent OSError: [Errno 28] No space left on device
 ARG TMPDIR=/var/tmp
 # any setup commands that you want
 RUN pip install poetry
